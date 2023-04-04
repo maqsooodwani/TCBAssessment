@@ -4,7 +4,11 @@ package hs.com.in.tcb.assessment;
 //import org.springframework.boot.test.context.SpringBootTest;
 
 //@SpringBootTest
-class MovieCatalogServiceApplicationTests {
+class ApplicationTests {
+	
+	public static void main(String[] args) {
+		
+	}
 
 	/*
 	 * @Test void contextLoads() { }
