@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>hs.com.in</groupId>
-	<artifactId>movie-catalog-service</artifactId>
+	<artifactId>TCB-Assessment-Service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>movie-catalog-service</name>
-	<description>This api will fetch all the movies details a particular user has watched.</description>
+	<name>TCB-Assessment-Service</name>
+	<description>This is TCB Assessment test service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -24,7 +24,7 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -34,7 +34,7 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 
 	<build>

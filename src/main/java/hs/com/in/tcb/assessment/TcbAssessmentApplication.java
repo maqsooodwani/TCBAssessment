@@ -1,13 +1,13 @@
-package hs.com.in.moviecatalogservice;
+package hs.com.in.tcb.assessment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieCatalogServiceApplication {
+public class TcbAssessmentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieCatalogServiceApplication.class, args);
+		SpringApplication.run(TcbAssessmentApplication.class, args);
 	}
 
 }
