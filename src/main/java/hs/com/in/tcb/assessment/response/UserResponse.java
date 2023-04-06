@@ -8,6 +8,7 @@ import hs.com.in.tcb.assessment.request.Address;
 @JsonInclude(Include.NON_NULL)
 public class UserResponse {
 	
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String gender;
@@ -16,6 +17,12 @@ public class UserResponse {
 	private String errorMessage;
 	private String message;
 	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getMessage() {
 		return message;
 	}

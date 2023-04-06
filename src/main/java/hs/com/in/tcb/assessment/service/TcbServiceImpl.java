@@ -29,6 +29,7 @@ public class TcbServiceImpl {
 		Optional<UserEntity> userEntity=userRepository.findById(Integer.parseInt(userId));
 		if(userEntity.isPresent()) {
 			UserEntity user=userEntity.get();
+			userResponse.setUserId(user.getUserId());
 			userResponse.setFirstName(user.getFirstName());
 			userResponse.setGender(user.getGender());
 			userResponse.setDateOfBirth(user.getDateOfBirth());
@@ -43,6 +44,7 @@ public class TcbServiceImpl {
 		UserResponse response = new UserResponse();
 		if(user.getDateOfBirth()!=null) {
 			response.setErrorMessage("DateOfBirth cannot be Updated.");
+			response.setUserId(user.getUserId());
 			return response;
 		}else {
 			Optional<UserEntity> userEntity=userRepository.findById(user.getUserId());
@@ -52,6 +54,7 @@ public class TcbServiceImpl {
 				userRepository.save(savedUserEntity);
 			}else {
 				response.setErrorMessage("User Not Found.");
+				response.setUserId(user.getUserId());
 				return response;
 			}
 		}

@@ -14,7 +14,7 @@ public class UserDetailsRequest {
 	private String lastName;
 	private String gender;
 	private String dateOfBirth;
-	private List<Address> address;
+	private List<Address> address = new ArrayList();
 	
 	public int getUserId() {
 		return userId;
