@@ -3,19 +3,23 @@ package hs.com.in.tcb.assessment.request;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(Include.NON_NULL)
 public class UserDetailsRequest {
 	
-	private String userId;
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String gender;
 	private String dateOfBirth;
 	private List<Address> address;
 	
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 	public String getFirstName() {

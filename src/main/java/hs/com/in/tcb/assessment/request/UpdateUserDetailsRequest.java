@@ -1,32 +1,25 @@
-package hs.com.in.tcb.assessment.response;
+package hs.com.in.tcb.assessment.request;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-import hs.com.in.tcb.assessment.request.Address;
-
-@JsonInclude(Include.NON_NULL)
-public class UserResponse {
+public class UpdateUserDetailsRequest {
 	
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String gender;
 	private String dateOfBirth;
-	private Address address;
-	private String errorMessage;
-	private String message;
+	private List<Address> address;
 	
-	public String getMessage() {
-		return message;
+	public int getUserId() {
+		return userId;
 	}
-	public void setMessage(String message) {
-		this.message = message;
-	}
-	public String getErrorMessage() {
-		return errorMessage;
-	}
-	public void setErrorMessage(String errorMessage) {
-		this.errorMessage = errorMessage;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -52,12 +45,10 @@ public class UserResponse {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public Address getAddress() {
+	public List<Address> getAddress() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	public void setAddress(List<Address> address) {
 		this.address = address;
 	}
-
-
 }
