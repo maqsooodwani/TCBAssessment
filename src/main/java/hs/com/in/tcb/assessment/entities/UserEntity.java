@@ -1,21 +1,33 @@
-package hs.com.in.tcb.assessment.request;
+package hs.com.in.tcb.assessment.entities;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDetailsRequest {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+@Entity(name="users")
+public class UserEntity {
 	
-	private String userId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId;
 	private String firstName;
 	private String lastName;
 	private String gender;
 	private String dateOfBirth;
-	private List<Address> address;
+	@OneToMany(cascade=CascadeType.ALL)
+	private List<AddressEntity> address = new ArrayList();
 	
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 	public String getFirstName() {
@@ -42,10 +54,10 @@ public class UserDetailsRequest {
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	public List<Address> getAddress() {
+	public List<AddressEntity> getAddress() {
 		return address;
 	}
-	public void setAddress(List<Address> address) {
+	public void setAddress(List<AddressEntity> address) {
 		this.address = address;
 	}
 }
